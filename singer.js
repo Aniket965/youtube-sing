@@ -7,9 +7,7 @@ const decoder = require('lame').Decoder
 const speaker = require('speaker')
 var ytpl = require('ytpl')
 
-run(process.argv[2])
-function run(url) {
-
+module.exports = (url) => {
     var path = process.cwd()
     var IsRunning = false;
     var Playlist_urls = [];
@@ -63,13 +61,12 @@ function run(url) {
                 .pipe(speaker());
             streamas.on('open', () => IsRunning = true);
             streamas.on('close', () => {
-
                 IsRunning = false
                 stdin.removeAllListeners();
                 if (Playlist_urls.length > 0) {
                     Playlist_urls.shift();
+                    playsong(Playlist_urls[0])
                 }
-
             });
 
         });

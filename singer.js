@@ -7,8 +7,8 @@ const decoder = require('lame').Decoder
 const speaker = require('speaker')
 var ytpl = require('ytpl')
 
-
-module.exports = (url) => {
+run(process.argv[2])
+function run(url) {
 
     var path = process.cwd()
     var IsRunning = false;

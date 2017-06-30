@@ -25,7 +25,6 @@
   "dependencies": {
     "colors": "^1.1.2",
     "lame": "^1.2.4",
-    "prompt": "^1.0.0",
     "speaker": "^0.3.0",
     "youtube-audio-stream": "0.0.50",
     "youtube-dl": "^1.11.1",

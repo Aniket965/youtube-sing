@@ -4,7 +4,6 @@ var exec = require('child_process').exec;
 const stream = require('youtube-audio-stream')
 const decoder = require('lame').Decoder
 const speaker = require('speaker')
-var prompt = require('prompt');
 var ytpl = require('ytpl')
 
 
@@ -12,7 +11,7 @@ module.exports = (url) => {
 
     var path = process.cwd()
     var IsRunning = false;
-    var Playlist_urls = []
+    var Playlist_urls = [];
 
     if (url.includes('playlist')) {
         console.log('isPlaylist')
@@ -22,14 +21,12 @@ module.exports = (url) => {
 
                 if (!IsRunning) {
                     playsong(item.url_simple);
-                    Playlist_urls.push(item.url_simple);
+            
                 } else {
                     Playlist_urls.push(item.url_simple);
                 }
 
             });
-
-
 
         });
 
@@ -37,15 +34,13 @@ module.exports = (url) => {
     else {
         playsong(url);
     }
-
     function playsong(url) {
 
         IsRunning = true
         youtubedl.getInfo(url, function (err, info) {
             if (err) throw err;
-            console.log("Playing...\n".cyan, info.title.rainbow);
+            console.log("Playing...\n".cyan + info.title.rainbow);
             console.log('wanna save offline ?(yes)'.yellow)
-
             var stdin = process.openStdin();
             stdin.addListener("data", function (d) {
                 if (d.toString().trim() === 'yes') {
@@ -60,19 +55,21 @@ module.exports = (url) => {
                 }
             });
 
+
+
             var streamas = stream(url)
                 .pipe(decoder())
                 .pipe(speaker());
             streamas.on('open', () => IsRunning = true);
             streamas.on('close', () => {
+
                 IsRunning = false
-                Playlist_urls.shift();
                 stdin.removeAllListeners();
                 if (Playlist_urls.length > 0) {
-                    playsong(Playlist_urls[0]);
+                    Playlist_urls.shift();
                 }
 
-            })
+            });
 
         });
 

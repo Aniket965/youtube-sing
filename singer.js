@@ -65,7 +65,7 @@ module.exports = (url) => {
                 stdin.removeAllListeners();
                 if (Playlist_urls.length > 0) {
                     Playlist_urls.shift();
-                    playsong(Playlist_urls[0])
+                    playsong(Playlist_urls[0'])
                 }
             });
 

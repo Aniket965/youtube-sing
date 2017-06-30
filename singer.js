@@ -14,8 +14,8 @@ module.exports = (url) => {
     var Playlist_urls = [];
 
     if (url.includes('playlist')) {
-        console.log('isPlaylist')
-        ytpl('PLzQqd22EbZ9AvwgkxefgQ0PM5VS_MaS8r', function (err, playlist) {
+        var i = url.indexOf('=') + 1;
+        ytpl(url.substring(i), function (err, playlist) {
             if (err) throw err;
             playlist.items.forEach((item) => {
 

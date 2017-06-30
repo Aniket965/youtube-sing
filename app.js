@@ -1,2 +1,2 @@
-singer = require('./singer');
+var singer = require('./singer');
 singer(process.argv[2]);

@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "youtube new song downloader mp3 ",
   "main": "app.js",
-   "bin": {
+  "bin": {
     "youtube-sing": "app.js"
   },
   "scripts": {
@@ -23,7 +23,11 @@
   },
   "homepage": "https://github.com/Aniket965/youtube-sing#readme",
   "dependencies": {
-    "colors": "^1.1.2"
-
+    "colors": "^1.1.2",
+    "lame": "^1.2.4",
+    "prompt": "^1.0.0",
+    "speaker": "^0.3.0",
+    "youtube-audio-stream": "0.0.50",
+    "youtube-dl": "^1.11.1"
   }
 }

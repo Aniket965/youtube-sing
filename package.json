@@ -2,7 +2,7 @@
   "name": "youtube-sing",
   "version": "1.0.7",
   "description": "youtube new song downloader mp3 ",
-  "main": "app.js",
+  "main": "singer.js",
   "bin": {
     "youtube-sing": "singer.js"
   },

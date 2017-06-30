@@ -1,3 +1,4 @@
+#!/usr/bin/node
 var colors = require('colors');
 var youtubedl = require('youtube-dl')
 var exec = require('child_process').exec;

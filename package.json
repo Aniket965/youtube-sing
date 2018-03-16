@@ -1,10 +1,10 @@
 {
   "name": "youtube-sing",
-  "version": "1.0.9",
+  "version": "1.1.12",
   "description": "youtube new song downloader mp3 ",
   "main": "singer.js",
   "bin": {
-    "youtube-sing": "singer.js"
+    "youtube-sing": "app.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,11 +23,11 @@
   },
   "homepage": "https://github.com/Aniket965/youtube-sing#readme",
   "dependencies": {
-    "colors": "^1.1.2",
+    "colors": "^1.2.1",
     "lame": "^1.2.4",
-    "speaker": "^0.3.0",
-    "youtube-audio-stream": "0.0.50",
-    "youtube-dl": "^1.11.1",
-    "ytpl": "^0.1.6"
+    "speaker": "^0.4.0",
+    "youtube-audio-stream": "^0.2.0",
+    "youtube-dl": "^1.12.2",
+    "ytpl": "^0.1.10"
   }
 }

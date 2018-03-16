@@ -4,7 +4,21 @@ youtuber new song playlist downloader in mp3
 
 
 ## installation
-- first install node-gyp ,see their [readme](https://github.com/nodejs/node-gyp/blob/master/README.md)
-- install speaker module globally,see their [readme](https://www.npmjs.com/package/speaker)
-- install [youtube-dl](https://rg3.github.io/youtube-dl/download.html)
-- install youtube-sing globally using `npm install -g youtube-sing`
+- for macos
+```sh
+brew install youtube-dl
+npm install -g youtube-sing
+```
+
+- for linux
+> first install node-gyp ,see their [readme](https://github.com/nodejs/node-gyp/blob/master/README.md)
+> install speaker module globally,see their [readme](https://www.npmjs.com/package/speaker)
+> install [youtube-dl](https://rg3.github.io/youtube-dl/download.html)
+> install youtube-sing globally using `npm install -g youtube-sing`
+
+# Usage
+```sh
+youtube-sing playlistcode
+example -
+youtube-sing bzW9fmwcmG4
+```

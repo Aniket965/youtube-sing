@@ -24,6 +24,7 @@
   "homepage": "https://github.com/Aniket965/youtube-sing#readme",
   "dependencies": {
     "colors": "^1.2.1",
+    "emojifylogs": "0.0.2",
     "lame": "^1.2.4",
     "speaker": "^0.4.0",
     "youtube-audio-stream": "^0.2.0",
